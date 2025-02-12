@@ -9,20 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Set initial volume
     audio.volume = 0.5;
 
-    // Try to play automatically
-    audio.play().catch(() => {
-        console.log("Autoplay blocked, waiting for user interaction.");
-    });
+    // Play music on user interaction
+    function playAudio() {
+        if (audio.paused) {
+            audio.play().catch(error => console.log("Playback error:", error));
+        }
+    }
+
+    // Wait for a user interaction before playing the audio
+    document.body.addEventListener("click", playAudio, { once: true });
 
     // Volume Control
     volumeSlider.addEventListener("input", function () {
         audio.volume = this.value;
-    });
-
-    // Fallback: Play on first user interaction if autoplay is blocked
-    document.body.addEventListener("click", function () {
-        if (audio.paused) {
-            audio.play();
-        }
     });
 });
