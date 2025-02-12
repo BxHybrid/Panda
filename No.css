@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+body {
+    font-family: 'Koulen', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('black.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #ff4d6d; /* Valentine pinkish-red */
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #ff4d6d; /* Valentine red */
+    color: white;
+    padding: 20px;
+    font-size: 64px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid #d6336c;
+}
+
+/* Image Container */
+.image-container {
+    margin: 50px auto;
+    max-width: 1000px;
+    padding: 20px;
+    background: rgba(255, 192, 203, 0.7); /* Light pink overlay */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 77, 109, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+    transform: scale(1.05); /* Slight pop effect */
+}
+
+/* Flexbox to Align Images Horizontally */
+.image-container img {
+    width: 100%; /* Adjust width so they fit side by side */
+    margin: 10px;
+    border-radius: 10px;
+    border: 5px solid #ff4d6d;
+    display: inline-block; /* Ensures they align */
+}
+
+/* Alternative Flexbox Layout */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container .image-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Styling for text */
+.image-container h2,
+.image-container h3 {
+    color: #d6336c;
+    text-align: center;
+}
+
+.image-container h1 {
+    font-size: 64px;
+    margin: 10px 0;
+    color: #d6336c;
+}
+
+.image-container h2 {
+    font-size: 64px;
+    margin: 10px 0;
+    color: #d6336c;
+}
+
+/* Clickable Text */
+.image-container p {
+    font-size: 64px;
+    color: #800f2f;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.image-container p:hover {
+    color: #ff4d6d;
+}
+
+/* Footer */
+footer {
+    background-color: #800f2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 5px solid #ff4d6d;
+}
+
+/* Audio Control Styles */
+.audio-controls {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgba(255, 192, 203, 0.8); /* Light pink background */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+}
+
+/* #volume-slider {
+    width: 100px;
+    cursor: pointer;
+} */
+
+/* Clickable Yes/No Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.button-container p {
+    font-size: 64px;
+    color: #800f2f;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: 5px solid red; /* Red box */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button-container p:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.1); /* Slight pop effect */
+}
+
+/* Confetti Effect */
+.confetti {
+    position: fixed;
+    top: -10px; /* Start slightly above the screen */
+    width: 10px;
+    height: 10px;
+    background-color: red; /* Default color */
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+

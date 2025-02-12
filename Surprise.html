@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise :D</title>
+    <link rel="stylesheet" href="Surprise.css"> <!-- Link to CSS -->
+</head>
+<body>
+
+    <!-- Volume Control -->
+    <div class="audio-controls">
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+    <!-- Audio Player -->
+    <audio id="bg-music" loop autoplay>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="image-container">
+        <h1>I LOVE PANDA SO VERY MUCH! SO I HAVE TO ASK...😍</h1>
+    
+        <img src="valentine.png" alt="Valentine's Day Theme">
+
+    </div>
+
+    <div class="button-container">
+    <p onclick="Yes()">YES 💕</p> 
+    <p onclick="No()">NO 💕</p>
+</div>
+
+
+    <script src="Surprise.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>
